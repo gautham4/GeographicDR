@@ -238,7 +238,7 @@ public class GeographicInformationParser extends AbstractParser{
             }
             CheckedHashSet<Locale> localeCheckedHashSet= (CheckedHashSet<Locale>) defaultDataIdentification.getLanguages();
             for(Locale l:localeCheckedHashSet){
-                metadata.add("IdentificationInfoLanguage-->",l.getDisplayLanguage());
+                metadata.add("IdentificationInfoLanguage-->",l.getDisplayLanguage(Locale.ENGLISH));
             }
             CodeListSet<TopicCategory> categoryList= (CodeListSet<TopicCategory>) defaultDataIdentification.getTopicCategories();
             for(TopicCategory t:categoryList){
